@@ -1,0 +1,85 @@
+Assignment
+***************************************************************
+package factorial;
+
+public class factorial 
+ {
+    public static void main(String[] args) {
+    	int number = 4;
+    	  int factorial = number;
+
+    	  for (int i = (number - 1); i > 1; i--) {
+    	   factorial = factorial * i;
+    	  }
+
+    	  System.out.println("Factorial of " + number + " is " + factorial);
+    	
+    	
+    	
+    }
+}
+
+
+
+****************************************************************
+package IncrementAndDecrementOperators;
+
+public class IncrementAndDecrementOperators 
+ {
+    public static void main(String[] args) {
+        int v1 = 10, v2 = 11, v3 = 14, v4= 15;
+        int v5 = 21, v6 = 22, v7 = 24, v8 = 25;
+        // Increment Operators 
+        v1=++v2;
+        v3=v4++;
+        // Decrement Operators
+        v5=--v6;
+        v7=v8--;
+        
+        //Pre Increment
+        System.out.println(v1);
+        System.out.println(v2);
+        
+        //Post Increment
+        System.out.println(v3);
+        System.out.println(v4);
+
+      //Pre Decrement
+        System.out.println(v5);
+        System.out.println(v6);
+        
+        //Post Decrement
+        System.out.println(v7);
+        System.out.println(v8);       
+    }
+}
+*******************************************************************
+package ncrnpr;
+
+public class ncrnpr 
+{
+	public static int nPr(int n, int r)
+	{
+		int result=factorial(n)/factorial(n-r);
+		return result;
+	}
+	public static int nCr(int n, int r)
+	{
+		int result = factorial(n)/(factorial(n-r)*factorial(r));
+		return result;
+	}
+	public static int factorial(int n)
+	{
+		int i=1;
+		int fact=1;
+		for(i=1;i<=n;i++)
+			fact=fact*i;
+		return fact;
+	}
+	
+	public static void main(String[] args) 
+	{		
+		System.out.println(nPr(6,3));
+		System.out.println(nCr(8,4));
+	}
+}
